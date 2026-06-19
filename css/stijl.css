@@ -1,23 +1,29 @@
 /* ===========================================================================
-   stijl.css  -  Eigen vormgeving bovenop Bootstrap
+   stijl.css  -  Eigen vormgeving bovenop Bootstrap (DONKER thema)
+   De pagina's staan in donkere modus via  <html data-bs-theme="dark">,
+   waardoor Bootstrap zelf alle kaarten, formulieren, tabellen en vensters
+   donker maakt. Hieronder stemmen we enkel onze eigen klassen daarop af.
    Thema: diep indigo/paars met goud (mythologie/oudheid-sfeer).
    =========================================================================== */
 
 :root {
-    --myth-donker: #161229;
-    --myth-paars:  #2a2350;
-    --myth-goud:   #d4a02a;
-    --myth-goud-licht: #f6d365;
+    --myth-donker:      #100d1c;
+    --myth-paars:       #221b3d;
+    --myth-kaart:       #1b1630;
+    --myth-rand:        #332a4d;
+    --myth-goud:        #e0b341;
+    --myth-goud-licht:  #f6d36b;
+    --myth-tekst-zacht: #c9c3de;
 }
 
 body {
-    background-color: #faf8f3;
-    color: #20202a;
+    background-color: var(--myth-donker);
+    color: #e9e7f3;
 }
 
 /* --- Navigatiebalk --------------------------------------------------------- */
 .bg-myth {
-    background: linear-gradient(90deg, var(--myth-donker), var(--myth-paars));
+    background: linear-gradient(90deg, #0c0a16, var(--myth-paars));
 }
 .navbar-brand span {
     color: var(--myth-goud-licht);
@@ -27,41 +33,46 @@ body {
 
 /* --- Hero (kop van de homepagina) ----------------------------------------- */
 .hero {
-    background: linear-gradient(135deg, var(--myth-paars), var(--myth-donker));
+    background: linear-gradient(135deg, var(--myth-paars), #0c0a16);
     color: #fff;
     border-radius: 1rem;
+    border: 1px solid var(--myth-rand);
 }
-.hero img {
-    filter: drop-shadow(0 4px 10px rgba(0,0,0,.4));
-}
+.hero img { filter: drop-shadow(0 4px 12px rgba(0, 0, 0, .5)); }
 
 /* --- Kaarten (verhalen & wezens) ------------------------------------------ */
+.card { background-color: var(--myth-kaart); border-color: var(--myth-rand); }
+
 .kaart-link {
     text-decoration: none;
     color: inherit;
-    transition: transform .12s ease, box-shadow .12s ease;
-    border: 1px solid #e7e2d6;
+    background-color: var(--myth-kaart);
+    border: 1px solid var(--myth-rand);
+    transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
 }
 .kaart-link:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(42, 35, 80, .15);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, .45);
     border-color: var(--myth-goud);
 }
-.kaart-link .card-title {
-    color: var(--myth-paars);
-}
+.kaart-link .card-title { color: var(--myth-goud-licht); }
+.kaart-link .card-text  { color: var(--myth-tekst-zacht); }
+
+/* Een link binnen een badge neemt de kleur van de badge over (leesbaarheid) */
+.badge a { color: inherit; text-decoration: none; }
 
 /* Thumbnail van een wezen in de lijst */
 .wezen-thumb {
     height: 140px;
     object-fit: cover;
+    background: #0e0b18;
 }
 .wezen-thumb-leeg {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #efeadf;
-    color: #b7ad93;
+    background: #241f33;
+    color: #6f6790;
     font-size: 2rem;
 }
 
@@ -70,6 +81,8 @@ body {
     width: 100%;
     max-height: 360px;
     object-fit: cover;
+    background: #0e0b18;
+    border: 1px solid var(--myth-rand);
 }
 .wezen-afbeelding-leeg {
     display: flex;
@@ -78,8 +91,8 @@ body {
     justify-content: center;
     gap: .25rem;
     height: 220px;
-    background: #efeadf;
-    color: #b7ad93;
+    background: #241f33;
+    color: #6f6790;
     border-radius: .5rem;
     font-size: 2rem;
 }
@@ -93,18 +106,18 @@ body {
     cursor: pointer;
     padding: 0 .25rem;
 }
-.pen:hover { color: var(--myth-paars); }
+.pen:hover { color: var(--myth-goud-licht); }
 
 /* --- Het bewerkbare rijke-tekstvak ---------------------------------------- */
 .rijke-tekst {
     min-height: 160px;
     height: auto;
     overflow-y: auto;
-    background: #fff;
+    background: #171328;
+    color: #e9e7f3;
+    border-color: var(--myth-rand);
 }
-.rijke-tekst:focus {
-    outline: 2px solid var(--myth-goud-licht);
-}
+.rijke-tekst:focus { outline: 2px solid var(--myth-goud); }
 .rijke-werkbalk .btn { min-width: 2.2rem; }
 
 /* Afbeeldingen die in de leestekst staan, netjes schalen */
@@ -115,8 +128,9 @@ body {
 
 /* --- Voettekst ------------------------------------------------------------- */
 footer {
-    background: var(--myth-donker);
-    color: #cfc8e6;
+    background: #0c0a16;
+    color: var(--myth-tekst-zacht);
+    border-top: 1px solid var(--myth-rand);
 }
 footer a { color: var(--myth-goud-licht); }
 
