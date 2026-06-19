@@ -1,0 +1,6 @@
+# Veiligheid: in de uploads-map mag NOOIT servercode uitgevoerd worden.
+# Zo kan een geuploade afbeelding nooit als PHP-script draaien.
+php_flag engine off
+<FilesMatch "\.(php|phtml|phar|phps|cgi|pl|py|asp|aspx|sh)$">
+    Require all denied
+</FilesMatch>

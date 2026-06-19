@@ -1,0 +1,12 @@
+# Door gebruikers geuploade afbeeldingen horen niet in versiebeheer.
+# We houden de map wel bij (.gitkeep) en de beveiliging (.htaccess).
+uploads/*
+!uploads/.gitkeep
+!uploads/.htaccess
+
+# Systeem-/editorbestanden
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
