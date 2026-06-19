@@ -4,6 +4,9 @@ uploads/*
 !uploads/.gitkeep
 !uploads/.htaccess
 
+# Geheime productie-instellingen (cPanel databank) - nooit in versiebeheer!
+api/config.local.php
+
 # Systeem-/editorbestanden
 .DS_Store
 Thumbs.db
