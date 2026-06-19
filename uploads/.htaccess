@@ -1,6 +1,16 @@
 # Veiligheid: in de uploads-map mag NOOIT servercode uitgevoerd worden.
 # Zo kan een geuploade afbeelding nooit als PHP-script draaien.
-php_flag engine off
-<FilesMatch "\.(php|phtml|phar|phps|cgi|pl|py|asp|aspx|sh)$">
+
+# php_flag werkt enkel met mod_php; daarom afgeschermd met IfModule, zodat
+# dit onder PHP-FPM/suPHP (zoals op cPanel) GEEN 500-fout veroorzaakt.
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+
+# Weiger rechtstreekse toegang tot uitvoerbare bestanden (Apache 2.4).
+<FilesMatch "\.(php|phtml|phps|php[0-9]|pht|phar|cgi|pl|py|sh)$">
     Require all denied
 </FilesMatch>
