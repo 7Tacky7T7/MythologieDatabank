@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mythologie Databank</title>
+    <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link href="css/stijl.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ===================== NAVIGATIEBALK ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-myth sticky-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                <img src="assets/logo.svg" alt="Logo" width="36" height="36">
+                <span>Mythologie<span class="fw-light">Databank</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-2">
+                    <li class="nav-item alleen-admin d-none">
+                        <a class="nav-link" href="admin.html"><i class="bi bi-people"></i> Gebruikers</a>
+                    </li>
+                    <li class="nav-item js-uitgelogd">
+                        <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#authModal">
+                            Aanmelden / Registreren
+                        </button>
+                    </li>
+                    <li class="nav-item js-ingelogd d-none navbar-text text-light">
+                        <i class="bi bi-person-circle"></i> <span id="navNaam"></span>
+                        <span id="navWachtBadge" class="badge text-bg-warning ms-1 d-none">wacht op goedkeuring</span>
+                    </li>
+                    <li class="nav-item js-ingelogd d-none">
+                        <button id="navUitloggen" class="btn btn-outline-light btn-sm">Afmelden</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <header class="container my-4">
+        <div class="hero p-4 p-md-5 d-flex flex-column flex-md-row align-items-center gap-4">
+            <img src="assets/logo.svg" alt="Logo" width="110" height="110">
+            <div>
+                <h1 class="mb-2">Encyclopedie van mythen &amp; wezens</h1>
+                <p class="mb-0 lead">
+                    Verhalen en mythische wezens uit de Griekse, Egyptische, Keltische,
+                    Noorse, Arabische en Afrikaanse mythologie &mdash; verbonden door
+                    landen, categorieën en hun verhalen.
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- ===================== VERHALEN ===================== -->
+        <section class="mb-5">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <h2 class="mb-0"><i class="bi bi-book"></i> Verhalen</h2>
+                <div class="d-flex gap-2">
+                    <input id="zoekVerhaal" class="form-control" type="search" placeholder="Zoek een verhaal...">
+                    <button class="btn btn-success text-nowrap alleen-bewerker d-none"
+                            data-bs-toggle="modal" data-bs-target="#nieuwVerhaalModal">
+                        <i class="bi bi-plus-lg"></i> Nieuw
+                    </button>
+                </div>
+            </div>
+            <div id="lijstVerhalen" class="row g-3"></div>
+        </section>
+
+        <!-- ===================== WEZENS ===================== -->
+        <section class="mb-5">
+            <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-3">
+                <h2 class="mb-0"><i class="bi bi-stars"></i> Wezens</h2>
+                <div class="d-flex gap-2">
+                    <input id="zoekWezen" class="form-control" type="search" placeholder="Zoek een wezen...">
+                    <button class="btn btn-success text-nowrap alleen-bewerker d-none"
+                            data-bs-toggle="modal" data-bs-target="#nieuwWezenModal">
+                        <i class="bi bi-plus-lg"></i> Nieuw
+                    </button>
+                </div>
+            </div>
+            <div id="lijstWezens" class="row g-3"></div>
+        </section>
+    </main>
+
+    <footer class="py-4 mt-5">
+        <div class="container d-flex flex-wrap justify-content-between gap-2">
+            <span>&copy; Mythologie Databank &mdash; examenproject 6AD</span>
+            <span>Gemaakt met PHP, een eigen JSON-API en JavaScript.</span>
+        </div>
+    </footer>
+
+    <!-- ===================== MODAL: aanmelden / registreren ===================== -->
+    <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title h5">Welkom</h2>
+                    <button class="btn-close" data-bs-dismiss="modal" aria-label="Sluiten"></button>
+                </div>
+                <div class="modal-body">
+                    <ul class="nav nav-tabs mb-3" role="tablist">
+                        <li class="nav-item"><button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tabLogin" type="button">Aanmelden</button></li>
+                        <li class="nav-item"><button class="nav-link" data-bs-toggle="tab" data-bs-target="#tabReg" type="button">Registreren</button></li>
+                    </ul>
+                    <div class="tab-content">
+                        <!-- Aanmelden -->
+                        <div class="tab-pane fade show active" id="tabLogin">
+                            <form id="loginForm">
+                                <div class="mb-3">
+                                    <label class="form-label" for="loginNaam">Gebruikersnaam</label>
+                                    <input id="loginNaam" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="loginWachtwoord">Wachtwoord</label>
+                                    <input type="password" id="loginWachtwoord" class="form-control" required>
+                                </div>
+                                <div id="loginMelding"></div>
+                                <button class="btn btn-primary w-100" type="submit">Aanmelden</button>
+                            </form>
+                        </div>
+                        <!-- Registreren -->
+                        <div class="tab-pane fade" id="tabReg">
+                            <form id="regForm">
+                                <div class="mb-3">
+                                    <label class="form-label" for="regNaam">Gebruikersnaam</label>
+                                    <input id="regNaam" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="regEmail">E-mail</label>
+                                    <input type="email" id="regEmail" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" for="regWachtwoord">Wachtwoord (min. 6 tekens)</label>
+                                    <input type="password" id="regWachtwoord" class="form-control" required>
+                                </div>
+                                <div id="regMelding"></div>
+                                <button class="btn btn-success w-100" type="submit">Account aanmaken</button>
+                            </form>
+                            <p class="small text-muted mt-3 mb-0">
+                                Na registratie kan je aanmelden, maar een administrator moet je eerst
+                                goedkeuren voor je iets kan wijzigen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAL: nieuw verhaal ===================== -->
+    <div class="modal fade" id="nieuwVerhaalModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="nvForm">
+                    <div class="modal-header">
+                        <h2 class="modal-title h5">Nieuw verhaal</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sluiten"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label" for="nvTitel">Titel</label>
+                            <input id="nvTitel" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="nvSynopsis">Synopsis (korte samenvatting)</label>
+                            <textarea id="nvSynopsis" class="form-control" rows="2" required></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="nvEeuw">Eeuw (negatief = v.Chr., bv. -8)</label>
+                            <input type="number" id="nvEeuw" class="form-control" value="1" required>
+                        </div>
+                        <div id="nvMelding"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Aanmaken &amp; bewerken</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAL: nieuw wezen ===================== -->
+    <div class="modal fade" id="nieuwWezenModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form id="nwForm">
+                    <div class="modal-header">
+                        <h2 class="modal-title h5">Nieuw wezen</h2>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Sluiten"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label" for="nwNaam">Naam</label>
+                            <input id="nwNaam" class="form-control" required>
+                        </div>
+                        <div id="nwMelding"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success">Aanmaken &amp; bewerken</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== SCRIPTS ===================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
