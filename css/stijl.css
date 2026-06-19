@@ -1,0 +1,127 @@
+/* ===========================================================================
+   stijl.css  -  Eigen vormgeving bovenop Bootstrap
+   Thema: diep indigo/paars met goud (mythologie/oudheid-sfeer).
+   =========================================================================== */
+
+:root {
+    --myth-donker: #161229;
+    --myth-paars:  #2a2350;
+    --myth-goud:   #d4a02a;
+    --myth-goud-licht: #f6d365;
+}
+
+body {
+    background-color: #faf8f3;
+    color: #20202a;
+}
+
+/* --- Navigatiebalk --------------------------------------------------------- */
+.bg-myth {
+    background: linear-gradient(90deg, var(--myth-donker), var(--myth-paars));
+}
+.navbar-brand span {
+    color: var(--myth-goud-licht);
+    font-weight: 700;
+    letter-spacing: .3px;
+}
+
+/* --- Hero (kop van de homepagina) ----------------------------------------- */
+.hero {
+    background: linear-gradient(135deg, var(--myth-paars), var(--myth-donker));
+    color: #fff;
+    border-radius: 1rem;
+}
+.hero img {
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,.4));
+}
+
+/* --- Kaarten (verhalen & wezens) ------------------------------------------ */
+.kaart-link {
+    text-decoration: none;
+    color: inherit;
+    transition: transform .12s ease, box-shadow .12s ease;
+    border: 1px solid #e7e2d6;
+}
+.kaart-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(42, 35, 80, .15);
+    border-color: var(--myth-goud);
+}
+.kaart-link .card-title {
+    color: var(--myth-paars);
+}
+
+/* Thumbnail van een wezen in de lijst */
+.wezen-thumb {
+    height: 140px;
+    object-fit: cover;
+}
+.wezen-thumb-leeg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #efeadf;
+    color: #b7ad93;
+    font-size: 2rem;
+}
+
+/* --- Detailpagina: grote afbeelding van een wezen ------------------------- */
+.wezen-afbeelding {
+    width: 100%;
+    max-height: 360px;
+    object-fit: cover;
+}
+.wezen-afbeelding-leeg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    height: 220px;
+    background: #efeadf;
+    color: #b7ad93;
+    border-radius: .5rem;
+    font-size: 2rem;
+}
+.wezen-afbeelding-leeg span { font-size: .9rem; }
+
+/* --- Potlood-knopjes (inline bewerken) ------------------------------------ */
+.pen {
+    border: none;
+    background: transparent;
+    color: var(--myth-goud);
+    cursor: pointer;
+    padding: 0 .25rem;
+}
+.pen:hover { color: var(--myth-paars); }
+
+/* --- Het bewerkbare rijke-tekstvak ---------------------------------------- */
+.rijke-tekst {
+    min-height: 160px;
+    height: auto;
+    overflow-y: auto;
+    background: #fff;
+}
+.rijke-tekst:focus {
+    outline: 2px solid var(--myth-goud-licht);
+}
+.rijke-werkbalk .btn { min-width: 2.2rem; }
+
+/* Afbeeldingen die in de leestekst staan, netjes schalen */
+.leestekst img { max-width: 100%; height: auto; }
+
+/* De koppel-formuliertjes niet te breed laten worden */
+.koppel-form { max-width: 420px; }
+
+/* --- Voettekst ------------------------------------------------------------- */
+footer {
+    background: var(--myth-donker);
+    color: #cfc8e6;
+}
+footer a { color: var(--myth-goud-licht); }
+
+/* --- Kleine responsive bijsturing ----------------------------------------- */
+@media (max-width: 575.98px) {
+    .hero { text-align: center; }
+    .wezen-thumb { height: 110px; }
+}
