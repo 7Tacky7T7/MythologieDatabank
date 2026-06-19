@@ -1,0 +1,16 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Bunyip">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#20301e"/><stop offset="1" stop-color="#0e160c"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <ellipse cx="240" cy="215" rx="165" ry="62" fill="#3a5a32" opacity="0.22"/>
+  <path d="M118 252 C140 190 190 158 240 158 C290 158 340 190 362 252 Z" fill="#16241a"/>
+  <path d="M196 172 l-11 -36 l25 23 z" fill="#16241a"/>
+  <path d="M284 172 l11 -36 l-25 23 z" fill="#16241a"/>
+  <g fill="#b6ff5a"><ellipse cx="214" cy="206" rx="15" ry="9"/><ellipse cx="266" cy="206" rx="15" ry="9"/></g>
+  <circle cx="214" cy="206" r="4" fill="#16241a"/><circle cx="266" cy="206" r="4" fill="#16241a"/>
+  <rect x="0" y="252" width="480" height="108" fill="#0e1c12" opacity="0.85"/>
+  <g stroke="#3a5a32" stroke-width="3" fill="none" opacity="0.55">
+    <path d="M110 272 q20 -8 40 0"/><path d="M320 272 q20 -8 40 0"/><path d="M205 288 q20 -8 40 0"/></g>
+  <g stroke="#4a6b32" stroke-width="6" stroke-linecap="round">
+    <path d="M68 252 L62 304"/><path d="M84 252 L94 304"/><path d="M412 252 L406 304"/><path d="M396 252 L406 304"/></g>
+</svg>

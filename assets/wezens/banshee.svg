@@ -1,0 +1,14 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Banshee">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2a3340"/><stop offset="1" stop-color="#141a24"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <circle cx="240" cy="150" r="125" fill="#9fb4cc" opacity="0.16"/>
+  <path d="M240 52 C314 52 334 120 334 192 L334 318 L300 292 L266 318 L240 294 L214 318 L180 292 L146 318 L146 192 C146 120 166 52 240 52 Z"
+        fill="#e7eef6" opacity="0.9"/>
+  <ellipse cx="240" cy="150" rx="54" ry="68" fill="#28323f"/>
+  <ellipse cx="221" cy="143" rx="11" ry="17" fill="#cdd9e6"/>
+  <ellipse cx="259" cy="143" rx="11" ry="17" fill="#cdd9e6"/>
+  <ellipse cx="240" cy="198" rx="12" ry="22" fill="#171f2b"/>
+  <g stroke="#cdd9e6" stroke-width="4" fill="none" opacity="0.5" stroke-linecap="round">
+    <path d="M95 120 q20 20 0 40"/><path d="M385 120 q-20 20 0 40"/></g>
+</svg>

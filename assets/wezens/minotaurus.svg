@@ -1,0 +1,18 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Minotaurus">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3a1414"/><stop offset="1" stop-color="#1f0c0c"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <g fill="#e8dcc0">
+    <path d="M158 150 C112 122 92 78 124 66 C134 102 162 124 182 142 Z"/>
+    <path d="M322 150 C368 122 388 78 356 66 C346 102 318 124 298 142 Z"/>
+  </g>
+  <path d="M240 108 C302 108 332 150 332 202 C332 264 292 304 240 304 C188 304 148 264 148 202 C148 150 178 108 240 108 Z" fill="#6b4a32"/>
+  <path d="M150 178 C120 176 106 196 122 208 C142 202 152 196 160 191 Z" fill="#5a3e2a"/>
+  <path d="M330 178 C360 176 374 196 358 208 C338 202 328 196 320 191 Z" fill="#5a3e2a"/>
+  <ellipse cx="240" cy="252" rx="62" ry="46" fill="#8a6347"/>
+  <ellipse cx="217" cy="252" rx="9" ry="14" fill="#3a2a1e"/>
+  <ellipse cx="263" cy="252" rx="9" ry="14" fill="#3a2a1e"/>
+  <circle cx="240" cy="286" r="19" fill="none" stroke="#e6b432" stroke-width="6"/>
+  <g fill="#ffcf3f"><ellipse cx="205" cy="188" rx="17" ry="11"/><ellipse cx="275" cy="188" rx="17" ry="11"/></g>
+  <g fill="#7a1010"><circle cx="205" cy="188" r="6"/><circle cx="275" cy="188" r="6"/></g>
+</svg>

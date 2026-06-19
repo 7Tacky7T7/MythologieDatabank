@@ -1,0 +1,16 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Anubis">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#241f12"/><stop offset="1" stop-color="#13131a"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <circle cx="240" cy="150" r="125" fill="#caa23a" opacity="0.22"/>
+  <path d="M182 122 L168 38 L220 110 Z" fill="#16161e"/>
+  <path d="M298 122 L312 38 L260 110 Z" fill="#16161e"/>
+  <path d="M240 98 C302 98 322 140 322 186 C322 232 292 252 292 252 L240 322 L188 252 C188 252 158 232 158 186 C158 140 178 98 240 98 Z" fill="#1c1c26"/>
+  <g stroke="#d9b441" stroke-width="7" opacity="0.85" stroke-linecap="round">
+    <path d="M176 150 H304"/><path d="M182 176 H298"/></g>
+  <g fill="#d9b441">
+    <path d="M193 182 q22 -16 46 0 q-22 14 -46 0 Z"/>
+    <path d="M241 182 q22 -16 46 0 q-22 14 -46 0 Z"/></g>
+  <circle cx="214" cy="182" r="6" fill="#15151c"/><circle cx="266" cy="182" r="6" fill="#15151c"/>
+  <ellipse cx="240" cy="300" rx="15" ry="11" fill="#0c0c12"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Djinn">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#2a1740"/><stop offset="1" stop-color="#1a0f2b"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <circle cx="240" cy="135" r="115" fill="#ff8a3a" opacity="0.14"/>
+  <path d="M300 248 C322 208 290 198 282 178 C302 158 332 168 332 138 C332 108 300 100 270 110 C292 80 250 58 230 90 C218 70 188 80 200 110 C168 110 158 142 186 156 C158 176 176 208 206 202 C196 228 218 248 242 236"
+        fill="none" stroke="#c9a3e8" stroke-width="11" stroke-linecap="round" opacity="0.85"/>
+  <g fill="#ecd9fb"><circle cx="232" cy="120" r="7"/><circle cx="272" cy="120" r="7"/></g>
+  <g fill="#e6b432">
+    <ellipse cx="240" cy="302" rx="82" ry="26"/>
+    <path d="M168 298 Q240 250 312 298 Q302 322 240 322 Q178 322 168 298 Z"/>
+    <path d="M312 292 q42 -6 46 16 q-24 4 -42 -3 z"/>
+    <circle cx="240" cy="262" r="11"/>
+  </g>
+</svg>

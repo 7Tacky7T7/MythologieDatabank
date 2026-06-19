@@ -68,7 +68,7 @@ function renderAfbeelding() {
     // De afbeelding zelf (of een leeg vak).
     if (w.afbeelding) {
         const img = document.createElement('img');
-        img.src = 'uploads/' + w.afbeelding;
+        img.src = UI.afbeeldingUrl(w.afbeelding);
         img.alt = w.naam;
         img.className = 'img-fluid rounded mb-2 wezen-afbeelding';
         zone.append(img);

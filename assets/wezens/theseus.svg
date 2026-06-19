@@ -1,0 +1,18 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Theseus">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#3a2a14"/><stop offset="1" stop-color="#1d1408"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <g fill="none" stroke="#caa23a" stroke-width="4" opacity="0.16">
+    <path d="M240 322 L240 92 L152 92 L152 250 L322 250 L322 132 L196 132 L196 210 L276 210 L276 172"/>
+  </g>
+  <g stroke="#d9d2c4" stroke-width="9" stroke-linecap="round"><path d="M122 300 L300 122"/></g>
+  <g stroke="#caa23a" stroke-width="9" stroke-linecap="round"><path d="M110 296 L142 264"/></g>
+  <circle cx="118" cy="304" r="9" fill="#caa23a"/>
+  <path d="M240 50 C260 60 268 90 264 120 L216 120 C212 90 220 60 240 50 Z" fill="#b3402a"/>
+  <path d="M240 110 C300 110 326 150 326 205 C326 250 300 285 285 300 L195 300 C180 285 154 250 154 205 C154 150 180 110 240 110 Z" fill="#caa23a"/>
+  <g fill="#2a1f0c">
+    <rect x="232" y="168" width="16" height="124" rx="6"/>
+    <rect x="186" y="180" width="46" height="22" rx="9"/>
+    <rect x="248" y="180" width="46" height="22" rx="9"/>
+  </g>
+</svg>

@@ -1,0 +1,14 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fenrir">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#1a2433"/><stop offset="1" stop-color="#0c1320"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <circle cx="240" cy="150" r="120" fill="#9fc4ff" opacity="0.10"/>
+  <path d="M152 152 L150 58 L212 120 Z" fill="#6b7787"/>
+  <path d="M328 152 L330 58 L268 120 Z" fill="#6b7787"/>
+  <path d="M240 108 C300 108 322 150 322 196 C322 236 296 256 270 263 L270 300 L210 300 L210 263 C184 256 158 236 158 196 C158 150 180 108 240 108 Z" fill="#7c8a9b"/>
+  <path d="M210 262 L240 322 L270 262 Z" fill="#9aa6b4"/>
+  <path d="M240 302 l-13 -15 h26 z" fill="#1c2430"/>
+  <g fill="#ffb23a"><path d="M186 184 l36 8 l-32 13 z"/><path d="M294 184 l-36 8 l32 13 z"/></g>
+  <circle cx="200" cy="196" r="5" fill="#1c2430"/><circle cx="280" cy="196" r="5" fill="#1c2430"/>
+  <g fill="#ffffff"><path d="M225 300 l5 19 l5 -19 z"/><path d="M245 300 l5 19 l5 -19 z"/></g>
+</svg>

@@ -1,0 +1,15 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mami Wata">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#0c4a52"/><stop offset="1" stop-color="#06303a"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <circle cx="240" cy="120" r="100" fill="#7fe8e0" opacity="0.12"/>
+  <path d="M240 250 C210 285 205 322 240 342 C275 322 270 285 240 250 Z" fill="#19a6a0"/>
+  <path d="M208 335 q32 20 64 0 q-32 32 -64 0 Z" fill="#2cc4bd"/>
+  <path d="M240 120 C262 120 272 140 270 165 C266 202 258 232 240 256 C222 232 214 202 210 165 C208 140 218 120 240 120 Z" fill="#2cc4bd"/>
+  <circle cx="240" cy="104" r="27" fill="#e3c19c"/>
+  <path d="M212 100 C198 132 204 178 220 204 C211 162 213 130 222 110 Z" fill="#12303a"/>
+  <path d="M268 100 C282 132 276 178 260 204 C269 162 267 130 258 110 Z" fill="#12303a"/>
+  <path d="M150 182 q42 -32 92 -10 q50 22 92 -12" fill="none" stroke="#8fe36b" stroke-width="9" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="150" cy="182" r="8" fill="#8fe36b"/>
+  <g fill="#0a5e68" opacity="0.55"><path d="M0 322 q60 -20 120 0 t120 0 t120 0 t120 0 v40 H0 Z"/></g>
+</svg>

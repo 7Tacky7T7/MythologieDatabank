@@ -65,8 +65,9 @@ async function laadWezens(zoek = '') {
         }
 
         lijst.innerHTML = wezens.map((w) => {
-            const afbeelding = w.afbeelding
-                ? `<img src="uploads/${UI.escape(w.afbeelding)}" class="card-img-top wezen-thumb" alt="${UI.escape(w.naam)}">`
+            const url = UI.afbeeldingUrl(w.afbeelding);
+            const afbeelding = url
+                ? `<img src="${UI.escape(url)}" class="card-img-top wezen-thumb" alt="${UI.escape(w.naam)}">`
                 : `<div class="card-img-top wezen-thumb wezen-thumb-leeg"><i class="bi bi-image"></i></div>`;
             return `
             <div class="col-6 col-md-4 col-lg-3">

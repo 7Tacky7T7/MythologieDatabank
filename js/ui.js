@@ -47,6 +47,15 @@ const UI = {
         return absoluut + 'e eeuw ' + tijdperk;
     },
 
+    // --- De juiste URL van een wezen-afbeelding bepalen ---------------------
+    //  Bevat de waarde een '/', dan is het een meegeleverde afbeelding
+    //  (bv. 'assets/wezens/medusa.svg'). Anders is het een bestand dat de
+    //  gebruiker zelf uploadde en in de map 'uploads' staat.
+    afbeeldingUrl(afbeelding) {
+        if (!afbeelding) return null;
+        return afbeelding.indexOf('/') !== -1 ? afbeelding : 'uploads/' + afbeelding;
+    },
+
     // --- Een knop (Bootstrap) maken in code ---------------------------------
     knop(tekst, klasse) {
         const b = document.createElement('button');

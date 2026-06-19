@@ -1,0 +1,23 @@
+<svg viewBox="0 0 480 360" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Medusa">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#0f3a2f"/><stop offset="1" stop-color="#072e38"/></linearGradient></defs>
+  <rect width="480" height="360" fill="url(#bg)"/>
+  <g fill="none" stroke="#4fbf82" stroke-width="11" stroke-linecap="round">
+    <path d="M240 155 C175 95 145 75 112 95"/>
+    <path d="M240 155 C200 80 180 52 150 50"/>
+    <path d="M240 155 C240 75 240 52 240 42"/>
+    <path d="M240 155 C280 80 300 52 330 50"/>
+    <path d="M240 155 C305 95 335 75 368 95"/>
+    <path d="M240 155 C165 125 125 125 105 148"/>
+    <path d="M240 155 C315 125 355 125 375 148"/>
+  </g>
+  <g fill="#74dca0">
+    <circle cx="112" cy="95" r="10"/><circle cx="150" cy="50" r="10"/><circle cx="240" cy="42" r="10"/>
+    <circle cx="330" cy="50" r="10"/><circle cx="368" cy="95" r="10"/><circle cx="105" cy="148" r="10"/><circle cx="375" cy="148" r="10"/>
+  </g>
+  <ellipse cx="240" cy="215" rx="80" ry="98" fill="#bfe9d0"/>
+  <g><ellipse cx="211" cy="203" rx="17" ry="11" fill="#ffffff"/><ellipse cx="269" cy="203" rx="17" ry="11" fill="#ffffff"/>
+     <circle cx="211" cy="203" r="6" fill="#0f3a2f"/><circle cx="269" cy="203" r="6" fill="#0f3a2f"/></g>
+  <path d="M240 220 l-9 30 h18 z" fill="#8fcfa8"/>
+  <path d="M216 270 q24 18 48 0" stroke="#3f7a5c" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>
