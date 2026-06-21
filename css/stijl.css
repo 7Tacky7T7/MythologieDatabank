@@ -21,6 +21,16 @@ body {
     color: #e9e7f3;
 }
 
+/* --- Typografie: klassiek lettertype voor titels --------------------------- */
+/* Cinzel heeft een Romeinse inscriptie-stijl; past bij de oudheid/mythologie.
+   Enkel voor titels en de merknaam; de gewone tekst blijft goed leesbaar. */
+h1, h2, h3,
+.navbar-brand span,
+.modal-title {
+    font-family: "Cinzel", Georgia, "Times New Roman", serif;
+    letter-spacing: .4px;
+}
+
 /* --- Navigatiebalk --------------------------------------------------------- */
 .bg-myth {
     background: linear-gradient(90deg, #0c0a16, var(--myth-paars));
