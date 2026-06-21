@@ -13,3 +13,6 @@ Thumbs.db
 *.log
 .vscode/
 .idea/
+
+# Persoonlijke studiemap - NIET in de repo (niet voor de leerkracht)
+docs/
