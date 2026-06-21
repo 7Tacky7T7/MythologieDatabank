@@ -73,7 +73,8 @@ const Editor = {
 
             okBtn.addEventListener('click', async () => {
                 const waarde = invoer.value;
-                okBtn.disabled = anBtn.disabled = true;
+                okBtn.disabled = true;
+                anBtn.disabled = true;
                 foutEl.textContent = '';
                 try {
                     await opties.bewaar(waarde);
@@ -82,7 +83,8 @@ const Editor = {
                     stop();
                 } catch (err) {
                     foutEl.textContent = err.message;
-                    okBtn.disabled = anBtn.disabled = false;
+                    okBtn.disabled = false;
+                    anBtn.disabled = false;
                 }
             });
         });
@@ -118,7 +120,6 @@ const Editor = {
             vak.contentEditable = 'true';
             vak.innerHTML = opties.haalHtml();
 
-            balk.dataset.koppel = 'true';
             this._koppelWerkbalk(balk, vak);   // knoppen aan het vak koppelen
 
             // --- Bewaar/annuleer ---
@@ -146,7 +147,8 @@ const Editor = {
 
             okBtn.addEventListener('click', async () => {
                 const html = vak.innerHTML;
-                okBtn.disabled = anBtn.disabled = true;
+                okBtn.disabled = true;
+                anBtn.disabled = true;
                 foutEl.textContent = '';
                 try {
                     await opties.bewaar(html);
@@ -154,7 +156,8 @@ const Editor = {
                     stop();
                 } catch (err) {
                     foutEl.textContent = err.message;
-                    okBtn.disabled = anBtn.disabled = false;
+                    okBtn.disabled = false;
+                    anBtn.disabled = false;
                 }
             });
         });
